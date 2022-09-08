@@ -10,7 +10,7 @@ include_once ("../Includes/D/config.php");
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] == "Login"){
  
 if(empty(trim($_POST["username"]))){
     $username_err = "Please enter username.";

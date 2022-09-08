@@ -140,7 +140,7 @@ if(empty(trim($_POST["username"]))){
                 alert-dismissible fade show" role="alert">' . $login_err . '</div>';
             }
             ?>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form" autocomplete="off">
                 <div class="username-container">
                     <input type="text" name="username" class="username-input"<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" placeholder="Username" required oninvalid="this.setCustomValidity('Enter your username here')"
                     oninput="this.setCustomValidity('')"/><br>
@@ -206,7 +206,7 @@ if(empty(trim($_POST["username"]))){
     ?>
 
     <div class="register-container-hidden" id="register">
-    <form class="signup-container" action="signup.php" method="POST">
+    <form class="signup-container" action="login.php" method="POST">
     <h1 class="title">Sign Up</h1> 
 
         <div class="input-container"> 

@@ -1,0 +1,190 @@
+.navigationWrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  overflow: hidden;
+  width: 100%;
+  height: 48px;
+  z-index: 3;
+  background-color: #484644;
+}
+.navigationWrapper .logoWrapper {
+  display: flex;
+  list-style-type: none;
+}
+.navigationWrapper .logoWrapper li {
+  opacity: 1;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.navigationWrapper .logoWrapper .menu {
+  opacity: 1;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 5px;
+}
+.navigationWrapper .logoWrapper .menu:hover {
+  color: #0616f5;
+}
+.navigationWrapper .logoWrapper .home {
+  opacity: 1;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  padding: 0 10px;
+  cursor: pointer;
+  display: flex;
+  z-index: 3;
+}
+.navigationWrapper .logoWrapper .home .link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: rgb(255, 255, 255);
+  padding-left: 10px;
+}
+.navigationWrapper .logoWrapper .home .link:hover {
+  color: #0616f5;
+}
+.navigationWrapper .logoWrapper .logo {
+  margin-left: 8%;
+  margin-top: 12%;
+  height: 40px;
+}
+.navigationWrapper .navigation {
+  display: fixed;
+  list-style-type: none;
+  z-index: 3;
+}
+.navigationWrapper .navigation li {
+  color: white;
+}
+.navigationWrapper .navigation .parent {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.navigationWrapper .navigation .parent button {
+  border-radius: 40px;
+}
+.navigationWrapper .navigation .parent .trigger {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  margin-top: 6px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.navigationWrapper .navigation .parent .trigger img {
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+}
+
+.modal-wrapper {
+  display: none;
+  float: right;
+  position: absolute;
+  transform: translate(0px, 48px);
+  right: 0;
+  width: 320px;
+  height: 180px;
+  z-index: 1;
+}
+.modal-wrapper .modal-content {
+  position: fixed;
+  align-items: center;
+  background-color: #484644;
+  width: 320px;
+  height: 180px;
+  border-radius: 0.5rem;
+  z-index: 1;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+}
+.modal-wrapper .modal-content li {
+  color: white;
+}
+.modal-wrapper .modal-content .parent {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.modal-wrapper .modal-content .parent button {
+  border-radius: 44px;
+  width: 88px;
+  height: 88px;
+  padding-bottom: 88px;
+  padding-right: 88px;
+}
+.modal-wrapper .modal-content .parent button .trigger2 {
+  border-radius: 44px;
+  width: 88px;
+  height: 88px;
+}
+.modal-wrapper .modal-content .parent button img {
+  border-radius: inherit;
+  width: 88px;
+  height: 88px;
+}
+.modal-wrapper .modal-content .parent div {
+  align-content: center;
+  color: rgb(255, 255, 255);
+  position: relative;
+  margin-left: 15px;
+  margin-top: 22px;
+}
+.modal-wrapper .modal-content .parent div .usercontainer {
+  margin-left: 15px;
+}
+.modal-wrapper .modal-content .parent div .user {
+  margin: 0px;
+  color: rgb(255, 255, 255);
+}
+.modal-wrapper .modal-content .parent div .mail {
+  margin: 0px;
+  color: rgb(255, 255, 255);
+}
+.modal-wrapper .modal-content .parent div .view {
+  margin: 0px;
+  color: rgb(43, 185, 221);
+  text-decoration: underline;
+}
+.modal-wrapper .modal-content .userout {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  border-top: 1px solid #505050;
+  text-align: center;
+}
+.modal-wrapper .modal-content .userout .signout {
+  float: right;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}/*# sourceMappingURL=topbar.css.map */

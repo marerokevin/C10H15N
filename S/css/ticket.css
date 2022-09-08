@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main_content_wsb {
+  background: white;
+  width: calc(100% - 280px);
+  height: 100%;
+  float: right;
+  margin-left: 280px;
+  padding-top: 48px;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.main_content_wsb .header {
+  width: inherit;
+  height: 57px;
+  position: fixed;
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  z-index: 3;
+}
+.main_content_wsb .topnavticket {
+  background-color: white;
+  margin-top: 57px;
+  width: 100%;
+  height: 57px;
+}
+.main_content_wsb .topnavticket .navholder {
+  width: 100%;
+  border-bottom: 2px solid rgb(105, 105, 105);
+  padding-top: 25px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.main_content_wsb .topnavticket .navholder .navticket {
+  background: rgb(234, 233, 233);
+  border: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-left: 2px solid rgb(105, 105, 105);
+  border-right: 2px solid rgb(105, 105, 105);
+  border-top: 2px solid rgb(105, 105, 105);
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-decoration: none;
+}
+.main_content_wsb .topnavticket .navholder .navticket:hover {
+  background: rgb(255, 145, 0);
+}
+.main_content_wsb .tabContainer {
+  height: 100%;
+  background-color: white;
+  width: 100%;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.main_content_wsb .tabContainer .createForm {
+  padding: 10px;
+  height: 100%;
+}
+.main_content_wsb .tabContainer .createForm .SectionSelect {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main_content_wsb .tabContainer .createForm .SectionSelect .formInputLabel {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.main_content_wsb .tabContainer .createForm .SectionSelect .formRadioButton {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.main_content_wsb .tabContainer .createForm .SectionSelect .formInput {
+  height: 30px;
+  width: 100%;
+}
+.main_content_wsb .tabContainer .createForm .formSelectCont {
+  display: none;
+  font-size: 15px;
+  width: 100%;
+}
+.main_content_wsb .tabContainer .createForm .inp8t {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+  font-size: 15x;
+  width: 100%;
+}
+.main_content_wsb .tabContainer .createForm .Relay {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+  font-size: 15x;
+  width: 100%;
+}
+
+.main_content_wosb {
+  background: white;
+  width: calc(100% - 49px);
+  margin-left: 49px;
+  height: 100%;
+  float: right;
+  padding-top: 48px;
+  transition: all 0.5s linear;
+  z-index: 1;
+}
+.main_content_wosb .header {
+  float: inherit;
+  width: inherit;
+  height: 57px;
+  position: fixed;
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  z-index: 3;
+}
+.main_content_wosb .topnavticket {
+  background-color: white;
+  margin-top: 57px;
+  width: 100%;
+  height: 57px;
+}
+.main_content_wosb .topnavticket .navholder {
+  width: 100%;
+  border-bottom: 2px solid rgb(105, 105, 105);
+  padding-top: 25px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.main_content_wosb .topnavticket .navholder .navticket {
+  background: rgb(234, 233, 233);
+  border: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-left: 2px solid rgb(105, 105, 105);
+  border-right: 2px solid rgb(105, 105, 105);
+  border-top: 2px solid rgb(105, 105, 105);
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 1px;
+  font-size: 10px;
+  margin-right: 1px;
+}
+.main_content_wosb .topnavticket .navholder .navticket:hover {
+  background: rgb(255, 145, 0);
+}/*# sourceMappingURL=ticket.css.map */

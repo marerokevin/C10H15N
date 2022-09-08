@@ -1,0 +1,219 @@
+.navigationWrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    overflow: hidden;
+    width: 100%;
+    height: 48px;
+    z-index: 3;
+    background-color: #484644;
+  
+    .logoWrapper {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            opacity: 1;
+            list-style-type: none;
+            color: white;
+            text-decoration: none;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+
+        }
+
+        .menu {
+            opacity: 1;
+            list-style-type: none;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding-left: 5px;
+
+            &:hover {
+                color: #0616f5;
+            }
+
+        }
+
+        .home {
+            opacity: 1;
+            list-style-type: none;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            padding: 0 10px;
+            cursor: pointer;
+            display: flex;
+            z-index: 3;
+
+            .link {
+                position: relative;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+                color: rgb(255, 255, 255);
+                padding-left: 10px;
+
+                &:hover {
+                    color: #0616f5;
+              }
+        }
+    }
+  
+        .logo {
+            margin-left: 8%;
+            margin-top: 12%;
+            height: 40px;
+        }
+        
+    }
+  
+    .navigation {
+        display: fixed;
+        list-style-type: none;
+        z-index: 3;
+  
+        li {
+            color: white;
+        }
+
+        .parent {
+                margin-right: 10px;
+                cursor: pointer;
+  
+            button {
+                border-radius: 40px;
+            }
+            .trigger {
+                position: fixed;
+                display: flex;
+                top: 0;
+                right: 0;
+                margin-top: 6px;
+                margin-right: 5px;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 32px;
+                }
+            }
+        }
+    }
+}
+
+.modal-wrapper {
+    display: none;
+    float: right;
+    position: absolute;
+    transform: translate(0px, 48px);
+    right: 0;
+    width: 320px;
+    height: 180px;
+    z-index: 1;
+
+    .modal-content {
+        position: fixed;
+        align-items: center;
+        background-color: #484644;
+        width: 320px;
+        height: 180px;
+        border-radius: 0.5rem;
+        z-index: 1;
+        border: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        
+        li {
+            color: white;
+        }
+
+        .parent {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+  
+            button {
+                border-radius: 44px;
+                width: 88px;
+                height: 88px;
+                padding-bottom: 88px;
+                padding-right: 88px;
+        
+                .trigger2 {
+                    border-radius: 44px;
+                    width: 88px;
+                    height: 88px;
+                }
+                
+                img {
+                    border-radius: inherit;
+                    width: 88px;
+                    height: 88px;
+                }
+            }
+            
+            div {
+                align-content: center;
+                color: rgb(255, 255, 255);
+                position: relative;
+                margin-left: 15px;
+                margin-top: 22px;
+
+                .usercontainer{
+                    margin-left: 15px;
+                }
+
+                .user {
+                    margin: 0px;
+                    color: rgb(255, 255, 255);
+                }
+    
+                .mail {
+                    margin: 0px;
+                    color: rgb(255, 255, 255);
+                }
+    
+                .view {
+                    margin: 0px;
+                    color: rgb(43, 185, 221);
+                    text-decoration: underline;
+                }
+            }
+        }
+        .userout {
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            border-top: 1px solid #505050;
+            text-align: center;
+            
+            .signout {
+                float: right;
+                width: 100%;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+        }
+
+    }
+}

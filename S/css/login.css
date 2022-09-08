@@ -358,7 +358,7 @@ html, body {
   width: 100%;
   font-size: 15px;
   border: 2px solid #aeaeae;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
 .register-container .full-name-container .input-first-name-container .input-name-main:hover {
@@ -381,7 +381,7 @@ html, body {
   width: 100%;
   font-size: 15px;
   border: 2px solid #aeaeae;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
 .register-container .full-name-container .input-last-name-container .input-name-main:hover {
@@ -403,7 +403,7 @@ html, body {
   width: 100%;
   font-size: 15px;
   border: 2px solid #aeaeae;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
 .register-container .full-name-container .input-suffix-name-container .input-name-main:hover {
@@ -424,7 +424,7 @@ html, body {
   width: 100%;
   font-size: 15px;
   border: 2px solid #aeaeae;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
 .register-container .input-container .input-main:hover {

@@ -1,16 +1,17 @@
 <?php
-session_start(); 
+session_start();
+ 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: /C10H15N/I/indexxxxa.php");
-    exit;   
+    header("location: /C10H15N/function/create.php");
+    exit;
+    
 }
-
 include_once ("../Includes/D/config.php");
  
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
-
-if($_SERVER["REQUEST_METHOD"] == "Login"){
+ 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
  
 if(empty(trim($_POST["username"]))){
     $username_err = "Please enter username.";
@@ -25,7 +26,7 @@ if(empty(trim($_POST["username"]))){
     }
     
     if(empty($username_err) && empty($password_err)){
-        $sql = "SELECT id, user_uid, user_pwd, first_name, last_name, user_level, email_address FROM accounts WHERE user_uid = ?";
+        $sql = "SELECT id, user_uid, user_pwd, first_name, last_name, user_level, email_address FROM users WHERE user_uid = ?";
         
         if($stmt = mysqli_prepare($db_conn, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -49,7 +50,7 @@ if(empty(trim($_POST["username"]))){
                             $_SESSION["user_level"] = $user_level;
                             $_SESSION["first_name"] = $first_name;
                             $_SESSION["last_name"] = $last_name;
-                            header("location: /C10H15N/I1/indexxxxa.php");
+                            header("location: /RNA/K/index.php");
                         }else{
                             $login_err = "Invalid username or password.";
                         }
@@ -65,51 +66,7 @@ if(empty(trim($_POST["username"]))){
         }
     }
     mysqli_close($db_conn);
-} else if ($_SERVER["REQUEST_METHOD"] == "register") {
-
-    $showAlert = false; 
-    $showError = false; 
-    $exists=false;
-          
-        include ("/C10H15N/Includes/D/config.php");
-    
-        $user_uid = $_POST["user_uid"];
-        $first_name = $_POST["first_name"];
-        $last_name = $_POST["last_name"];
-        $suffix = $_POST["suffix"];
-        $user_pwd = $_POST["user_pwd"]; 
-        $user_cpwd = $_POST["user_cpwd"];
-        $user_level = $_POST["user_level"];
-        $email_address = $_POST["email_address"];
-        $section = $_POST["section"];
-        $department = $_POST["department"];
-        
-                
-        $create_user_select = "SELECT * FROM accounts WHERE user_uid='$user_uid'";
-        $create_user_query = mysqli_query($db_conn, $create_user_select);
-        $create_user_count = mysqli_num_rows($create_user_query); 
-    
-        if($create_user_count == 0) {
-            if(($user_pwd == $user_cpwd) && $exists==false) {
-        
-                $hash = password_hash($user_pwd, PASSWORD_DEFAULT);
-    
-                $create_user_select2 = "INSERT INTO `accounts` ( `user_uid`, `first_name`, `last_name`, `suffix`, `user_pwd`, `user_cpwd`, `user_level`, `email_address`, `section`, `department`, `date`) VALUES ('$user_uid', '$first_name', '$last_name', '$suffix', '$hash', '$hash', '$user_level', '$email_address', '$section`, `$department`, current_timestamp())";
-        
-                $result = mysqli_query($db_conn, $create_user_select2);
-        
-                if ($result) {
-                    $showAlert = true; 
-                }
-            }
-            else {
-                $showError = "Passwords do not match"; 
-            }
-        }
-       if($create_user_count>0) {
-          $exists="Username already taken"; 
-       } 
-    }
+}
 ?>
  
 <!DOCTYPE html>
@@ -125,11 +82,11 @@ if(empty(trim($_POST["username"]))){
 <body>
     <div class="overall-container">
         <div class="titlecontainer-login">
-                <a href="/C10H15N/I/A/logind847104.php" class="header_logo">
-                    <img src="/C10H15N/S/images/glorylogo.svg" alt="GPI-BCP" class="glory-logo">
+                <a href="/C10H15N/I/index.php" class="header_logo">
+                    <img src="/C10H15N/S/images/frog.jpg" alt="GPI-BCP" class="glory-logo">
                 </a>
-            <h1 class="company-name">Glory Philippines Inc.</h1>
-            <h2 class="system-name">General Services - Inventory System</h2>
+            <h1 class="company-name">Frogitty Froggers</h1>
+            <h2 class="system-name">Business Continuity Plan System</h2>
         </div>
     </div>
     <div class="dual-function-container" id="login">
@@ -140,7 +97,7 @@ if(empty(trim($_POST["username"]))){
                 alert-dismissible fade show" role="alert">' . $login_err . '</div>';
             }
             ?>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form" autocomplete="off">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form">
                 <div class="username-container">
                     <input type="text" name="username" class="username-input"<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" placeholder="Username" required oninvalid="this.setCustomValidity('Enter your username here')"
                     oninput="this.setCustomValidity('')"/><br>
@@ -167,17 +124,20 @@ if(empty(trim($_POST["username"]))){
                 <div class="createaccount-container">
                     <a class="createaccount" onclick="register()" href=#>Create new account</a>
                 </div>
+
+
             </form>
         </div>  
     </div>
 
-<?php
+    <?php
     if($showAlert) {
-        echo '
-        <div class="alert-success" role="alert">
+    
+        echo '<div class="alert-success" role="alert">
         <button type="button" class="closebtn-success"
             data-dismiss="alert" aria-label="Close">
-            <strong>Success!</strong> Your account is now created and you can login.  
+            <strong>Success!</strong> Your account is 
+        now created and you can login.  
             <span aria-hidden="true">×</span> 
         </button> 
     </div>'; 
@@ -206,7 +166,7 @@ if(empty(trim($_POST["username"]))){
     ?>
 
     <div class="register-container-hidden" id="register">
-    <form class="signup-container" action="login.php" method="POST">
+    <form class="signup-container" action="signup.php" method="POST">
     <h1 class="title">Sign Up</h1> 
 
         <div class="input-container"> 
@@ -223,7 +183,7 @@ if(empty(trim($_POST["username"]))){
                 <option value="User">User</option>
             </select>
         </div>
-        
+
         <div class="full-name-container">
         <div class="input-first-name-container"> 
         <input type="text" class="input-name-main" id="first_name"
@@ -278,21 +238,4 @@ if(empty(trim($_POST["username"]))){
     </div>
 </body>
 </html>
-    <script>
-        var x = 0;
-    function register() {
-        if (x == 1) {
-            document.getElementById("register").className = "register-container-hidden";
-            document.getElementById("register").style.display = "block";
-            document.getElementById("login").className = "dual-function-container";
-            document.getElementById("login").style.display = "flex";
-            x = 0;
-        } else {
-            document.getElementById("register").className = "register-container";
-            document.getElementById("register").style.display = "block";
-            document.getElementById("login").className = "dual-function-container-hidden";
-            document.getElementById("login").style.display = "flex";
-            x = 1;
-        }
-    }
-    </script>
+<script src="/RNA/resources/scripts/register-r_side.js"></script>

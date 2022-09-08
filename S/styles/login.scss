@@ -423,7 +423,7 @@ html, body {
                 width: 100%;
                 font-size: 15px;
                 border: 2px solid #aeaeae;
-                border-radius: 2px;
+                border-radius: 5px;
                 transition:all .5s ease-in-out;
     
                 &:hover {
@@ -449,7 +449,7 @@ html, body {
                 width: 100%;
                 font-size: 15px;
                 border: 2px solid #aeaeae;
-                border-radius: 2px;
+                border-radius: 5px;
                 transition:all .5s ease-in-out;
     
                 &:hover {
@@ -474,7 +474,7 @@ html, body {
                 width: 100%;
                 font-size: 15px;
                 border: 2px solid #aeaeae;
-                border-radius: 2px;
+                border-radius: 5px;
                 transition:all .5s ease-in-out;
     
                 &:hover {
@@ -494,14 +494,13 @@ html, body {
         margin-top: 20px;
         margin-bottom: 20px;
 
-        
 
         .input-main {
             height: 100%;
             width: 100%;
             font-size: 15px;
             border: 2px solid #aeaeae;
-            border-radius: 2px;
+            border-radius: 5px;
             transition:all .5s ease-in-out;
 
             &:hover {
